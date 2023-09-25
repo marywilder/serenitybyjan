@@ -2,7 +2,7 @@
   "name": "serenity-by-jan",
   "private": true,
   "version": "0.0.0",
-  "homepage": ".",
+  "homepage": "https://marywilder.github.io/serenitybyjan/",
   "type": "module",
   "scripts": {
     "dev": "vite",
