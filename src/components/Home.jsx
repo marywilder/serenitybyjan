@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <section className='home-container'>
       <div className="shipping-notice">
-        <span onClick={() => {closePopup()}}>x</span>
+        <span onClick={() => {closePopup()}}></span>
         <p>
         Due to visiting my sister in Scottsdale, we are experiencing shipping delays. 
         </p>

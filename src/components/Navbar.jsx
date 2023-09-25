@@ -4,7 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom'
 import { addToCart, getTotal} from '../features/cartSlice';
 import cartImage from "../assets/shopping-cart-01-svgrepo-com.svg";
-
+import menuIcon from '../assets/menu-svgrepo-com.svg';
+import closeIcon from '../assets/close-svgrepo-com.svg';
 
 
 export default function Navbar() {
@@ -16,6 +17,12 @@ export default function Navbar() {
  const navRef = useRef();
  const showNavbar = () => {
   navRef.current.classList.toggle('responsive-nav');
+  const menuImage = document.querySelector('.nav-icon');
+  let menuSrc = menuImage.getAttribute('src');
+
+  (menuSrc === menuIcon ) ?
+    (menuImage.setAttribute('src', `${closeIcon}`)):
+    (menuImage.setAttribute('src', `${menuIcon}`))
  }
 
  useEffect(() => {
@@ -25,7 +32,7 @@ export default function Navbar() {
  
 
   return (<>
-    <button onClick={showNavbar} className="mobile-nav-button"></button>
+    <button onClick={showNavbar} className="mobile-nav-button"><img src={menuIcon} className="nav-icon"/></button>
     <nav ref={navRef}>
         
         <NavLink to='/' >Home </NavLink>
