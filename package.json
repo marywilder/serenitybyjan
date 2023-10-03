@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "homepage": "https://marywilder.github.io/serenitybyjan/",
   "type": "module",
+  "main": "main.jsx",
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
