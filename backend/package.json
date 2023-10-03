@@ -2,19 +2,7 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "nodemonConfig": {
-    "watch": [
-      "server"
-    ],
-    "ext": "ts",
-    "ignore": [
-      "*.test.ts"
-    ],
-    "delay": "3",
-    "execMap": {
-      "ts": "ts-node"
-    }
-  },
+  
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
