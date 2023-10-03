@@ -8,6 +8,9 @@ export const productsApi = createApi({
             query: () => "products",
         }),
     }),
+
+    
 });
 
 export const { useGetAllProductsQuery } = productsApi;
+

@@ -1,5 +1,5 @@
 import 'react-toastify/dist/ReactToastify.css';
-
+import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { AuthProvider } from './components/auth'
 import { ToastContainer } from 'react-toastify';
@@ -28,6 +28,15 @@ function App() {
   
 
   
+    const [data, setData] = useState('');
+  
+    const connectToBackend = () => {
+      fetch('/products')
+        .then((res) => res.json())
+        .then((data) => setData(data.products));
+    };
+
+    connectToBackend();
 
   return (
     
@@ -55,6 +64,7 @@ function App() {
         <Route path='login' element={<Login />} /> 
         <Route path='*' element={<PageNotFound />} />
       </Routes>
+      
       <img src={backgroundImage} className="backgroundImg"/>
       <CartPreview />
     </AuthProvider>

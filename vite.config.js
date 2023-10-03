@@ -5,4 +5,12 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: "/serenitybyjan/",
   plugins: [react()],
+  server: { // add this code
+    proxy: {
+      '/products': {
+        target: 'http://localhost:5000',
+        changeOrigin: true
+      }
+    }
+  }
 })
