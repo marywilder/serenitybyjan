@@ -25,7 +25,15 @@ import CartPreview from './components/cartPreview';
 
 
 function App() {
-  
+  const [data, setData] = useState('');
+
+  const connectToBackend = () => {
+    fetch('/products')
+      .then((res) => res.json())
+      .then((data) => setData(data.products));
+  };
+
+  connectToBackend();
 
   
     
